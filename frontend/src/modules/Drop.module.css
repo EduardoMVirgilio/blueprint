@@ -1,0 +1,26 @@
+.drop {
+    width: 25dvw;
+    height: 25dvh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: .25rem solid var(--light);
+    background-color: var(--color1);
+    transition: all 300ms ease-in-out;
+    color: var(--light);
+}
+
+.icon {
+    width: 4rem;
+    height: 4rem;
+}
+
+.active {
+    border-color: var(--alt2);
+    color: var(--alt2);
+    transition: all 300ms ease-in-out;
+}
+
+.drop input {
+    display: none;
+}

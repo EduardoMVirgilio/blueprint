@@ -24,8 +24,16 @@ const Drop = () => {
     setValue("file", e.dataTransfer.files[0]);
     console.log(e.dataTransfer.files[0]);
   };
+  const sleep = function(ms){
+    return new Promise(resolve => setTimeout(resolve, ms));
+};
+
+  const analize = async (data) => {
+    await sleep(10000);
+    console.log(data)
+  }
   return (
-    <form onSubmit={handleSubmit}>
+    <form className={Style.form} onSubmit={handleSubmit(analize)}>
       <label
         htmlFor="file"
         onDragEnter={dragging}
@@ -38,6 +46,8 @@ const Drop = () => {
         {!active && <LucideFile className={Style.icon} />}
         <input type="file" id="file" {...register("file")} />
       </label>
+
+      <button className={Style.button}>{isSubmitting? "Analizing..." : "Upload"}</button>
     </form>
   );
 };

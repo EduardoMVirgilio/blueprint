@@ -11,6 +11,7 @@ const App = () => {
 
   return (
     <>
+      <h1>Blueprint bebé</h1>
       <Tabs />
       {method === "file"? <Drop />: <Input /> }
     </>

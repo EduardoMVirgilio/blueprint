@@ -1,5 +1,5 @@
 import { LucideFile } from "lucide-react";
-import { methods } from "../helpers/contants";
+import { methods } from "../helpers/constants";
 import useMethod from "../hooks/useMethod";
 import Style from "../modules/Tab.module.css";
 import { LucideCode } from "lucide-react";

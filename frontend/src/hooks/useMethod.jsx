@@ -1,6 +1,6 @@
 import { create } from "zustand";
 import { persist, createJSONStorage } from "zustand/middleware";
-import { methods } from "../helpers/contants";
+import { methods } from "../helpers/constants";
 
 const call = (set, get) => ({
   method: methods[0],

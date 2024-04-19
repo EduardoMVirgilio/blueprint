@@ -1,4 +1,4 @@
-import { methods } from "../helpers/contants";
+import { methods } from "../helpers/constants";
 import Tab from "./Tab";
 import Style from "../modules/Tabs.module.css";
 const Tabs = () => {

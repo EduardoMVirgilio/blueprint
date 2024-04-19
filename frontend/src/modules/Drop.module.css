@@ -40,6 +40,11 @@
     font-family: 'Onest Variable', sans-serif;
 }
 
+/* estilar error */
+.error {
+    color: red;
+}
+
 
 @media (orientation: portrait) and (max-width: 1280px) {
     .drop {

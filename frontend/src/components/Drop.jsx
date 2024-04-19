@@ -29,6 +29,8 @@ const Drop = () => {
 };
 
   const analize = async (data) => {
+    if (data.file[0].type !== "application/json")  {
+      return setError("file", { type: "custom", message: "This is not a json file!" })}
     await sleep(10000);
     console.log(data)
   }
@@ -46,7 +48,7 @@ const Drop = () => {
         {!active && <LucideFile className={Style.icon} />}
         <input type="file" id="file" {...register("file")} />
       </label>
-
+      {errors && errors.file && <output className={Style.error}>{errors.file.message}</output>}
       <button className={Style.button}>{isSubmitting? "Analizing..." : "Upload"}</button>
     </form>
   );

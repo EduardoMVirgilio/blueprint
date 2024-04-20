@@ -10,13 +10,28 @@ const Input = () => {
         return new Promise((resolve) => setTimeout(resolve, ms));
     };
 
-    const analize = async (data) => {
+    const analyze = async (data) => {
+        try {
+            JSON.parse(data);
+            return true;
+        } catch (error) {
+            setError("jsonFormat", {
+                type: "custom",
+                message: "This is not a json text!",
+            });
+        }
         await sleep(10000);
         console.log(data);
     };
+
     return (
-        <form className={Style.form} onSubmit={handleSubmit(analize)}>
+        <form className={Style.form} onSubmit={handleSubmit(analyze)}>
             <textarea className={Style.input} {...register("json")}></textarea>
+            {errors && errors.file && (
+                <output /* className={Style.error} */>
+                    {errors.file.message}
+                </output>
+            )}
             <button className={Style.button}>
                 {isSubmitting ? "Analizing..." : "Upload"}
             </button>

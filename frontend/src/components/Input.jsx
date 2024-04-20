@@ -31,9 +31,9 @@ const Input = () => {
             <textarea className={Style.input} {...register("json")}></textarea>
             {console.log(errors)}
             {errors && errors.registerInput && (
-                <output /* className={Style.error} */>
+                <div className={Style.error}>
                     {errors.registerInput.message}
-                </output>
+                </div>
             )}
             <button className={Style.button}>
                 {isSubmitting ? "Analizing..." : "Upload"}

@@ -12,14 +12,16 @@ const Input = () => {
 
     const analyze = async (data) => {
         try {
-            JSON.parse(data);
+            await JSON.parse(data);
             return true;
         } catch (error) {
-            setError("jsonFormat", {
+            setError("registerInput", {
                 type: "custom",
                 message: "This is not a json text!",
-            });
+            })
+            console.error(error);
         }
+        
         await sleep(10000);
         console.log(data);
     };
@@ -27,9 +29,10 @@ const Input = () => {
     return (
         <form className={Style.form} onSubmit={handleSubmit(analyze)}>
             <textarea className={Style.input} {...register("json")}></textarea>
-            {errors && errors.file && (
+            {console.log(errors)}
+            {errors && errors.registerInput && (
                 <output /* className={Style.error} */>
-                    {errors.file.message}
+                    {errors.registerInput.message}
                 </output>
             )}
             <button className={Style.button}>

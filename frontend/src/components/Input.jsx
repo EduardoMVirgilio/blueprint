@@ -1,5 +1,6 @@
 import { useForm } from "react-hook-form";
 import Style from "../modules/Input.module.css";
+import { useState } from "react";
 
 const Input = () => {
     const state = useForm();
@@ -10,13 +11,35 @@ const Input = () => {
         return new Promise((resolve) => setTimeout(resolve, ms));
     };
 
-    const analize = async (data) => {
-        await sleep(10000);
-        console.log(data);
+    const analyze = async (data) => {
+        await sleep(5000);
+        try {
+            await JSON.parse(data);
+            return true;
+        } catch (error) {
+            setError("registerInput", {
+                type: "custom",
+                message: "This is not a json text!",
+            });
+            console.error(error)
+            return false;
+        }
+        
+        
     };
+
     return (
-        <form className={Style.form} onSubmit={handleSubmit(analize)}>
-            <textarea className={Style.input} {...register("json")}></textarea>
+        <form className={Style.form} onSubmit={handleSubmit(analyze)}>
+            <textarea
+                className={Style.input}
+                placeholder="Write your JSON here..."
+                {...register("json")}
+            ></textarea>
+            {errors && errors.registerInput && (
+                <div className={Style.error}>
+                    {errors.registerInput.message}
+                </div>
+            )}
             <button className={Style.button}>
                 {isSubmitting ? "Analizing..." : "Upload"}
             </button>

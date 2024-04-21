@@ -3,7 +3,6 @@ import "dotenv/config";
 
 const parser = async (model, db = "PostgreSQL") => {
   const input = `Transforms this data schema to a model for the Prisma ORM compatible prisma/schema.prisma.prisma file and ${db}:\n ${model} `;
-  console.log(input);
   try {
     return await textGeneration({
       accessToken: process.env.H_TOKEN,

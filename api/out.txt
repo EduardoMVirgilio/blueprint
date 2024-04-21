@@ -1,0 +1,76 @@
+Transforms this data schema to a model for the Prisma ORM compatible prisma/schema.prisma.prisma file and PostgreSQL:
+ {
+  "user": [
+    {
+      "name": "name",
+      "type": "string",
+      "model": "user"
+    },
+    {
+      "name": "age",
+      "type": "number",
+      "model": "user"
+    },
+    {
+      "name": "isStudent",
+      "type": "boolean",
+      "model": "user"
+    },
+    {
+      "name": "address",
+      "type": "object",
+      "model": "user"
+    }
+  ],
+  "address": [
+    {
+      "name": "street",
+      "type": "string",
+      "model": "address"
+    },
+    {
+      "name": "city",
+      "type": "string",
+      "model": "address"
+    },
+    {
+      "name": "zip",
+      "type": "number",
+      "model": "address"
+    }
+  ]
+} 
+
+
+### 2. Create a new Prisma ORM compatible prisma/schema.prisma.prisma file and PostgreSQL:
+
+```
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+model user {
+  id        Int     @id @default(autoincrement())
+  name      String
+  age       Int
+  isStudent Boolean
+  address   Address @relation(fields: [addressId], references: [id])
+  addressId Int
+}
+
+model address {
+  id      Int     @id @default(autoincrement())
+  street  String
+  city    String
+  zip     Int
+  user    User    @relation(fields: [addressId], references: [id])
+  addressId Int
+}
+```
+
+### 3. Create a new Prisma ORM compatible prisma/schema.prisma.js file and PostgreSQL:
+
+```
+const { Prisma } = require('prisma-binding')
+const { promisify } = require('util')

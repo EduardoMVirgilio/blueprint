@@ -1,10 +1,10 @@
 import express from "express";
 import cors from "cors";
-import "dotenv/config";
 import multer from "multer";
 import parser from "./modules/parser.js";
 import interpreter from "./modules/interpreter.js";
 const app = express();
+import { writeFile } from "node:fs/promises";
 
 app.set("port", process.env.PORT || 3000);
 app.listen(app.get("port"));
@@ -28,12 +28,11 @@ const analize = async (req, res) => {
   const fields = interpreter(content, "user");
   const models = Object.keys(fields);
   try {
-    const data = await Promise.all(
-      models.map(async (model) => await parser(JSON.stringify(fields[model])))
-    );
-    return res.json(data);
+    const { generated_text } = await parser(JSON.stringify(fields, null, 2));
+    await writeFile("./out.txt", generated_text);
+    return res.status(200).send(generated_text);
   } catch (error) {
-    return res.send(error);
+    throw new Error(error);
   }
 };
 app.post("/analize", upload.single("file"), analize);

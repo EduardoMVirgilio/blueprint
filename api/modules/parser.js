@@ -2,15 +2,20 @@ import { textGeneration } from "@huggingface/inference";
 import "dotenv/config";
 
 const parser = async (model, db = "PostgreSQL") => {
-  const { generated_text } = await textGeneration({
-    accessToken: process.env.H_TOKEN,
-    model: "deepseek-ai/deepseek-coder-1.3b-instruct",
-    inputs: `Transforma este esquema de datos a un modelo para el archivo prisma/schema.prisma de Prisma ORM compatible con ${db}: ${model} `,
-    parameters: {
-      max_new_tokens: 250,
-    },
-  });
-  return generated_text;
+  const input = `Transforms this data schema to a model for the Prisma ORM compatible prisma/schema.prisma.prisma file and ${db}:\n ${model} `;
+  console.log(input);
+  try {
+    return await textGeneration({
+      accessToken: process.env.H_TOKEN,
+      model: "codellama/CodeLlama-7b-hf",
+      inputs: input,
+      parameters: {
+        max_new_tokens: 250,
+      },
+    });
+  } catch (error) {
+    throw new Error(error);
+  }
 };
 
 export default parser;

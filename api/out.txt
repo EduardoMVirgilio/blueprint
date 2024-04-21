@@ -1,0 +1,61 @@
+I am working with Prisma ORM and PostgreSQL, need to transform this data schema, give me only models for the file prisma/schema.prisma:
+{
+  "user": [
+    {
+      "name": "name",
+      "type": "string",
+      "model": "user"
+    },
+    {
+      "name": "age",
+      "type": "number",
+      "model": "user"
+    },
+    {
+      "name": "isStudent",
+      "type": "boolean",
+      "model": "user"
+    },
+    {
+      "name": "address",
+      "type": "object",
+      "model": "user"
+    }
+  ],
+  "address": [
+    {
+      "name": "street",
+      "type": "string",
+      "model": "address"
+    },
+    {
+      "name": "city",
+      "type": "string",
+      "model": "address"
+    },
+    {
+      "name": "zip",
+      "type": "number",
+      "model": "address"
+    }
+  ]
+}
+
+```
+model User {
+  id        Int      @id @default(autoincrement())
+  name      String
+  age       Int
+  isStudent Boolean
+  address   Address
+}
+
+model Address {
+  id       Int      @id @default(autoincrement())
+  street   String
+  city     String
+  zip      Int
+  user     User     @relation(fields: [userId], references: [id])
+  userId   Int
+}
+```

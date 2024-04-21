@@ -6,7 +6,7 @@ const parser = async (model, db = "PostgreSQL") => {
   try {
     return await textGeneration({
       accessToken: process.env.H_TOKEN,
-      model: "codellama/CodeLlama-7b-hf",
+      model: "mistralai/Mixtral-8x7B-Instruct-v0.1",
       inputs: input,
       parameters: {
         max_new_tokens: 250,

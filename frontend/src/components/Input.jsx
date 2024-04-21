@@ -14,7 +14,7 @@ const Input = () => {
     const analyze = async (data) => {
         await sleep(5000);
         try {
-            await JSON.parse(data);
+            JSON.parse(data.json);
             return true;
         } catch (error) {
             setError("registerInput", {

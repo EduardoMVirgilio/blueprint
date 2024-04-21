@@ -2,7 +2,7 @@ import { textGeneration } from "@huggingface/inference";
 import "dotenv/config";
 
 const parser = async (model, db = "PostgreSQL") => {
-  const input = `Transforms this data schema to a model for the Prisma ORM compatible prisma/schema.prisma.prisma file and ${db}:\n ${model} `;
+  const input = `I am working with Prisma ORM and PostgreSQL, need to transform this data schema, give me only models for the file prisma/schema.prisma:\n${model}`;
   try {
     return await textGeneration({
       accessToken: process.env.H_TOKEN,

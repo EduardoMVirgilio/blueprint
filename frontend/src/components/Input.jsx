@@ -12,8 +12,8 @@ const Input = () => {
     };
 
     const analyze = async (data) => {
-        console.log(data)
-        /* await sleep(5000); */
+        /* console.log(data) */
+        await sleep(5000);
         try {
             const jsonText = data.json
             const obj = JSON.parse(jsonText);

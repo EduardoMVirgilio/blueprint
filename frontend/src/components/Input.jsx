@@ -12,20 +12,27 @@ const Input = () => {
     };
 
     const analyze = async (data) => {
-        await sleep(5000);
+        console.log(data)
+        /* await sleep(5000); */
         try {
-            JSON.parse(data.json);
-            return true;
+            const jsonText = data.json
+            const obj = JSON.parse(jsonText);
+            if (
+                typeof obj === "object" &&
+                obj !== null &&
+                !Array.isArray(obj)
+            ) {
+                return true;
+            }
         } catch (error) {
             setError("registerInput", {
                 type: "custom",
                 message: "This is not a json text!",
             });
-            console.error(error)
+            console.error(error);
             return false;
         }
-        
-        
+        return false;
     };
 
     return (

@@ -1,19 +1,1784 @@
-```
-model User {
-  id        Int      @id @default(autoincrement())
-  name      String
-  age       Int
-  isStudent Boolean
-  address   Address
+{
+  "finish_reason": "eos_token",
+  "generated_tokens": 296,
+  "seed": null,
+  "prefill": [],
+  "tokens": [
+    {
+      "id": 13,
+      "text": "\n",
+      "logprob": -0.012962341,
+      "special": false
+    },
+    {
+      "id": 13,
+      "text": "\n",
+      "logprob": -0.40356445,
+      "special": false
+    },
+    {
+      "id": 13940,
+      "text": "``",
+      "logprob": -1.2441406,
+      "special": false
+    },
+    {
+      "id": 28832,
+      "text": "`",
+      "logprob": -0.0015592575,
+      "special": false
+    },
+    {
+      "id": 13,
+      "text": "\n",
+      "logprob": -0.4326172,
+      "special": false
+    },
+    {
+      "id": 1978,
+      "text": "const",
+      "logprob": -0.28222656,
+      "special": false
+    },
+    {
+      "id": 371,
+      "text": " {",
+      "logprob": -0.2685547,
+      "special": false
+    },
+    {
+      "id": 5284,
+      "text": " Data",
+      "logprob": -0.8017578,
+      "special": false
+    },
+    {
+      "id": 5433,
+      "text": "Types",
+      "logprob": -0.00030326843,
+      "special": false
+    },
+    {
+      "id": 443,
+      "text": " }",
+      "logprob": -0.14526367,
+      "special": false
+    },
+    {
+      "id": 327,
+      "text": " =",
+      "logprob": -0.0046081543,
+      "special": false
+    },
+    {
+      "id": 2699,
+      "text": " require",
+      "logprob": -0.0040016174,
+      "special": false
+    },
+    {
+      "id": 857,
+      "text": "('",
+      "logprob": -0.5234375,
+      "special": false
+    },
+    {
+      "id": 3908,
+      "text": "sequ",
+      "logprob": -0.006793976,
+      "special": false
+    },
+    {
+      "id": 301,
+      "text": "el",
+      "logprob": -0.00022161007,
+      "special": false
+    },
+    {
+      "id": 653,
+      "text": "ize",
+      "logprob": -0.000011563301,
+      "special": false
+    },
+    {
+      "id": 2207,
+      "text": "');",
+      "logprob": -0.07092285,
+      "special": false
+    },
+    {
+      "id": 13,
+      "text": "\n",
+      "logprob": -0.0074272156,
+      "special": false
+    },
+    {
+      "id": 1978,
+      "text": "const",
+      "logprob": -0.24328613,
+      "special": false
+    },
+    {
+      "id": 5331,
+      "text": " sequ",
+      "logprob": -0.22521973,
+      "special": false
+    },
+    {
+      "id": 301,
+      "text": "el",
+      "logprob": -0.0044441223,
+      "special": false
+    },
+    {
+      "id": 653,
+      "text": "ize",
+      "logprob": -0.00039172173,
+      "special": false
+    },
+    {
+      "id": 327,
+      "text": " =",
+      "logprob": -0.020019531,
+      "special": false
+    },
+    {
+      "id": 2699,
+      "text": " require",
+      "logprob": -0.032348633,
+      "special": false
+    },
+    {
+      "id": 857,
+      "text": "('",
+      "logprob": -0.12231445,
+      "special": false
+    },
+    {
+      "id": 1979,
+      "text": "../",
+      "logprob": -0.1048584,
+      "special": false
+    },
+    {
+      "id": 2241,
+      "text": "config",
+      "logprob": -0.96435547,
+      "special": false
+    },
+    {
+      "id": 28748,
+      "text": "/",
+      "logprob": -0.18823242,
+      "special": false
+    },
+    {
+      "id": 2684,
+      "text": "db",
+      "logprob": -0.75878906,
+      "special": false
+    },
+    {
+      "id": 2207,
+      "text": "');",
+      "logprob": -0.57958984,
+      "special": false
+    },
+    {
+      "id": 13,
+      "text": "\n",
+      "logprob": -0.006011963,
+      "special": false
+    },
+    {
+      "id": 13,
+      "text": "\n",
+      "logprob": -0.15795898,
+      "special": false
+    },
+    {
+      "id": 1978,
+      "text": "const",
+      "logprob": -0.09790039,
+      "special": false
+    },
+    {
+      "id": 1247,
+      "text": " User",
+      "logprob": -0.7729492,
+      "special": false
+    },
+    {
+      "id": 327,
+      "text": " =",
+      "logprob": -0.08862305,
+      "special": false
+    },
+    {
+      "id": 5331,
+      "text": " sequ",
+      "logprob": -0.011474609,
+      "special": false
+    },
+    {
+      "id": 301,
+      "text": "el",
+      "logprob": -0.00015425682,
+      "special": false
+    },
+    {
+      "id": 653,
+      "text": "ize",
+      "logprob": -0.0000063180923,
+      "special": false
+    },
+    {
+      "id": 28723,
+      "text": ".",
+      "logprob": -0.0001655817,
+      "special": false
+    },
+    {
+      "id": 3380,
+      "text": "define",
+      "logprob": -0.0020599365,
+      "special": false
+    },
+    {
+      "id": 857,
+      "text": "('",
+      "logprob": -0.2614746,
+      "special": false
+    },
+    {
+      "id": 730,
+      "text": "User",
+      "logprob": -0.07086182,
+      "special": false
+    },
+    {
+      "id": 647,
+      "text": "',",
+      "logprob": -0.0059013367,
+      "special": false
+    },
+    {
+      "id": 371,
+      "text": " {",
+      "logprob": -0.13146973,
+      "special": false
+    },
+    {
+      "id": 13,
+      "text": "\n",
+      "logprob": -0.0068511963,
+      "special": false
+    },
+    {
+      "id": 2287,
+      "text": "   ",
+      "logprob": -0.71972656,
+      "special": false
+    },
+    {
+      "id": 1141,
+      "text": " name",
+      "logprob": -0.05279541,
+      "special": false
+    },
+    {
+      "id": 28747,
+      "text": ":",
+      "logprob": -0.057037354,
+      "special": false
+    },
+    {
+      "id": 371,
+      "text": " {",
+      "logprob": -0.040405273,
+      "special": false
+    },
+    {
+      "id": 13,
+      "text": "\n",
+      "logprob": -0.015098572,
+      "special": false
+    },
+    {
+      "id": 5390,
+      "text": "       ",
+      "logprob": -0.11047363,
+      "special": false
+    },
+    {
+      "id": 1212,
+      "text": " type",
+      "logprob": -0.0025157928,
+      "special": false
+    },
+    {
+      "id": 28747,
+      "text": ":",
+      "logprob": -0.001783371,
+      "special": false
+    },
+    {
+      "id": 5284,
+      "text": " Data",
+      "logprob": -0.0128479,
+      "special": false
+    },
+    {
+      "id": 5433,
+      "text": "Types",
+      "logprob": -0.00018632412,
+      "special": false
+    },
+    {
+      "id": 28723,
+      "text": ".",
+      "logprob": -0.00006532669,
+      "special": false
+    },
+    {
+      "id": 10505,
+      "text": "STRING",
+      "logprob": -0.0064315796,
+      "special": false
+    },
+    {
+      "id": 28725,
+      "text": ",",
+      "logprob": -0.23095703,
+      "special": false
+    },
+    {
+      "id": 13,
+      "text": "\n",
+      "logprob": -0.0017337799,
+      "special": false
+    },
+    {
+      "id": 5390,
+      "text": "       ",
+      "logprob": -0.28930664,
+      "special": false
+    },
+    {
+      "id": 1914,
+      "text": " allow",
+      "logprob": -0.028747559,
+      "special": false
+    },
+    {
+      "id": 4238,
+      "text": "Null",
+      "logprob": -0.0017023087,
+      "special": false
+    },
+    {
+      "id": 28747,
+      "text": ":",
+      "logprob": -0.0016908646,
+      "special": false
+    },
+    {
+      "id": 1341,
+      "text": " false",
+      "logprob": -0.040039062,
+      "special": false
+    },
+    {
+      "id": 13,
+      "text": "\n",
+      "logprob": -0.25708008,
+      "special": false
+    },
+    {
+      "id": 2287,
+      "text": "   ",
+      "logprob": -0.0064582825,
+      "special": false
+    },
+    {
+      "id": 1630,
+      "text": " },",
+      "logprob": -0.00095033646,
+      "special": false
+    },
+    {
+      "id": 13,
+      "text": "\n",
+      "logprob": -0.0069084167,
+      "special": false
+    },
+    {
+      "id": 2287,
+      "text": "   ",
+      "logprob": -0.012275696,
+      "special": false
+    },
+    {
+      "id": 3595,
+      "text": " age",
+      "logprob": -0.0014696121,
+      "special": false
+    },
+    {
+      "id": 28747,
+      "text": ":",
+      "logprob": -0.007259369,
+      "special": false
+    },
+    {
+      "id": 371,
+      "text": " {",
+      "logprob": -0.0052948,
+      "special": false
+    },
+    {
+      "id": 13,
+      "text": "\n",
+      "logprob": -0.00048661232,
+      "special": false
+    },
+    {
+      "id": 5390,
+      "text": "       ",
+      "logprob": -0.0026741028,
+      "special": false
+    },
+    {
+      "id": 1212,
+      "text": " type",
+      "logprob": -0.000279665,
+      "special": false
+    },
+    {
+      "id": 28747,
+      "text": ":",
+      "logprob": -0.0002515316,
+      "special": false
+    },
+    {
+      "id": 5284,
+      "text": " Data",
+      "logprob": -0.002456665,
+      "special": false
+    },
+    {
+      "id": 5433,
+      "text": "Types",
+      "logprob": -0.000029683113,
+      "special": false
+    },
+    {
+      "id": 28723,
+      "text": ".",
+      "logprob": -0.00021350384,
+      "special": false
+    },
+    {
+      "id": 23776,
+      "text": "NUMBER",
+      "logprob": -0.72021484,
+      "special": false
+    },
+    {
+      "id": 28725,
+      "text": ",",
+      "logprob": -0.015899658,
+      "special": false
+    },
+    {
+      "id": 13,
+      "text": "\n",
+      "logprob": -0.0007967949,
+      "special": false
+    },
+    {
+      "id": 5390,
+      "text": "       ",
+      "logprob": -0.025848389,
+      "special": false
+    },
+    {
+      "id": 1914,
+      "text": " allow",
+      "logprob": -0.012207031,
+      "special": false
+    },
+    {
+      "id": 4238,
+      "text": "Null",
+      "logprob": -0.0005283356,
+      "special": false
+    },
+    {
+      "id": 28747,
+      "text": ":",
+      "logprob": -0.000644207,
+      "special": false
+    },
+    {
+      "id": 1341,
+      "text": " false",
+      "logprob": -0.22753906,
+      "special": false
+    },
+    {
+      "id": 13,
+      "text": "\n",
+      "logprob": -0.039031982,
+      "special": false
+    },
+    {
+      "id": 2287,
+      "text": "   ",
+      "logprob": -0.001458168,
+      "special": false
+    },
+    {
+      "id": 1630,
+      "text": " },",
+      "logprob": -0.0014019012,
+      "special": false
+    },
+    {
+      "id": 13,
+      "text": "\n",
+      "logprob": -0.0011606216,
+      "special": false
+    },
+    {
+      "id": 2287,
+      "text": "   ",
+      "logprob": -0.0022792816,
+      "special": false
+    },
+    {
+      "id": 349,
+      "text": " is",
+      "logprob": -0.0014696121,
+      "special": false
+    },
+    {
+      "id": 28514,
+      "text": "Student",
+      "logprob": -0.0015382767,
+      "special": false
+    },
+    {
+      "id": 28747,
+      "text": ":",
+      "logprob": -0.014877319,
+      "special": false
+    },
+    {
+      "id": 371,
+      "text": " {",
+      "logprob": -0.0014457703,
+      "special": false
+    },
+    {
+      "id": 13,
+      "text": "\n",
+      "logprob": -0.00071525574,
+      "special": false
+    },
+    {
+      "id": 5390,
+      "text": "       ",
+      "logprob": -0.00374794,
+      "special": false
+    },
+    {
+      "id": 1212,
+      "text": " type",
+      "logprob": -0.00035095215,
+      "special": false
+    },
+    {
+      "id": 28747,
+      "text": ":",
+      "logprob": -0.0002655983,
+      "special": false
+    },
+    {
+      "id": 5284,
+      "text": " Data",
+      "logprob": -0.0015573502,
+      "special": false
+    },
+    {
+      "id": 5433,
+      "text": "Types",
+      "logprob": -0.000026464462,
+      "special": false
+    },
+    {
+      "id": 28723,
+      "text": ".",
+      "logprob": -0.00010764599,
+      "special": false
+    },
+    {
+      "id": 5759,
+      "text": "BO",
+      "logprob": -0.0011377335,
+      "special": false
+    },
+    {
+      "id": 28762,
+      "text": "O",
+      "logprob": -0.00007426739,
+      "special": false
+    },
+    {
+      "id": 26925,
+      "text": "LEAN",
+      "logprob": -0.000048995018,
+      "special": false
+    },
+    {
+      "id": 28725,
+      "text": ",",
+      "logprob": -0.008590698,
+      "special": false
+    },
+    {
+      "id": 13,
+      "text": "\n",
+      "logprob": -0.0002593994,
+      "special": false
+    },
+    {
+      "id": 5390,
+      "text": "       ",
+      "logprob": -0.0041885376,
+      "special": false
+    },
+    {
+      "id": 1914,
+      "text": " allow",
+      "logprob": -0.016906738,
+      "special": false
+    },
+    {
+      "id": 4238,
+      "text": "Null",
+      "logprob": -0.00033807755,
+      "special": false
+    },
+    {
+      "id": 28747,
+      "text": ":",
+      "logprob": -0.00040745735,
+      "special": false
+    },
+    {
+      "id": 1341,
+      "text": " false",
+      "logprob": -0.018707275,
+      "special": false
+    },
+    {
+      "id": 13,
+      "text": "\n",
+      "logprob": -0.043823242,
+      "special": false
+    },
+    {
+      "id": 2287,
+      "text": "   ",
+      "logprob": -0.00075387955,
+      "special": false
+    },
+    {
+      "id": 1630,
+      "text": " },",
+      "logprob": -0.039886475,
+      "special": false
+    },
+    {
+      "id": 13,
+      "text": "\n",
+      "logprob": -0.001458168,
+      "special": false
+    },
+    {
+      "id": 2287,
+      "text": "   ",
+      "logprob": -0.021133423,
+      "special": false
+    },
+    {
+      "id": 2962,
+      "text": " address",
+      "logprob": -0.011947632,
+      "special": false
+    },
+    {
+      "id": 28747,
+      "text": ":",
+      "logprob": -0.06518555,
+      "special": false
+    },
+    {
+      "id": 371,
+      "text": " {",
+      "logprob": -0.0035572052,
+      "special": false
+    },
+    {
+      "id": 13,
+      "text": "\n",
+      "logprob": -0.0040130615,
+      "special": false
+    },
+    {
+      "id": 5390,
+      "text": "       ",
+      "logprob": -0.019363403,
+      "special": false
+    },
+    {
+      "id": 1212,
+      "text": " type",
+      "logprob": -0.01663208,
+      "special": false
+    },
+    {
+      "id": 28747,
+      "text": ":",
+      "logprob": -0.001496315,
+      "special": false
+    },
+    {
+      "id": 5284,
+      "text": " Data",
+      "logprob": -0.009109497,
+      "special": false
+    },
+    {
+      "id": 5433,
+      "text": "Types",
+      "logprob": -0.00013661385,
+      "special": false
+    },
+    {
+      "id": 28723,
+      "text": ".",
+      "logprob": -0.00035119057,
+      "special": false
+    },
+    {
+      "id": 8438,
+      "text": "JSON",
+      "logprob": -0.1940918,
+      "special": false
+    },
+    {
+      "id": 28725,
+      "text": ",",
+      "logprob": -0.33569336,
+      "special": false
+    },
+    {
+      "id": 13,
+      "text": "\n",
+      "logprob": -0.009979248,
+      "special": false
+    },
+    {
+      "id": 5390,
+      "text": "       ",
+      "logprob": -0.043670654,
+      "special": false
+    },
+    {
+      "id": 1914,
+      "text": " allow",
+      "logprob": -0.008979797,
+      "special": false
+    },
+    {
+      "id": 4238,
+      "text": "Null",
+      "logprob": -0.0003976822,
+      "special": false
+    },
+    {
+      "id": 28747,
+      "text": ":",
+      "logprob": -0.000603199,
+      "special": false
+    },
+    {
+      "id": 1341,
+      "text": " false",
+      "logprob": -0.11584473,
+      "special": false
+    },
+    {
+      "id": 13,
+      "text": "\n",
+      "logprob": -0.060058594,
+      "special": false
+    },
+    {
+      "id": 2287,
+      "text": "   ",
+      "logprob": -0.008369446,
+      "special": false
+    },
+    {
+      "id": 443,
+      "text": " }",
+      "logprob": -0.053466797,
+      "special": false
+    },
+    {
+      "id": 13,
+      "text": "\n",
+      "logprob": -0.0036525726,
+      "special": false
+    },
+    {
+      "id": 3498,
+      "text": "});",
+      "logprob": -0.94384766,
+      "special": false
+    },
+    {
+      "id": 13,
+      "text": "\n",
+      "logprob": -0.0007119179,
+      "special": false
+    },
+    {
+      "id": 13,
+      "text": "\n",
+      "logprob": -0.043426514,
+      "special": false
+    },
+    {
+      "id": 1978,
+      "text": "const",
+      "logprob": -0.3491211,
+      "special": false
+    },
+    {
+      "id": 13046,
+      "text": " Address",
+      "logprob": -0.08996582,
+      "special": false
+    },
+    {
+      "id": 327,
+      "text": " =",
+      "logprob": -0.007041931,
+      "special": false
+    },
+    {
+      "id": 5331,
+      "text": " sequ",
+      "logprob": -0.032196045,
+      "special": false
+    },
+    {
+      "id": 301,
+      "text": "el",
+      "logprob": -0.00010454655,
+      "special": false
+    },
+    {
+      "id": 653,
+      "text": "ize",
+      "logprob": -9.536743e-7,
+      "special": false
+    },
+    {
+      "id": 28723,
+      "text": ".",
+      "logprob": -0.00009405613,
+      "special": false
+    },
+    {
+      "id": 3380,
+      "text": "define",
+      "logprob": -0.00091695786,
+      "special": false
+    },
+    {
+      "id": 857,
+      "text": "('",
+      "logprob": -0.0025596619,
+      "special": false
+    },
+    {
+      "id": 5049,
+      "text": "Address",
+      "logprob": -0.021957397,
+      "special": false
+    },
+    {
+      "id": 647,
+      "text": "',",
+      "logprob": -0.0007996559,
+      "special": false
+    },
+    {
+      "id": 371,
+      "text": " {",
+      "logprob": -0.011627197,
+      "special": false
+    },
+    {
+      "id": 13,
+      "text": "\n",
+      "logprob": -0.001868248,
+      "special": false
+    },
+    {
+      "id": 2287,
+      "text": "   ",
+      "logprob": -0.0072746277,
+      "special": false
+    },
+    {
+      "id": 5948,
+      "text": " street",
+      "logprob": -0.03918457,
+      "special": false
+    },
+    {
+      "id": 28747,
+      "text": ":",
+      "logprob": -0.0032691956,
+      "special": false
+    },
+    {
+      "id": 371,
+      "text": " {",
+      "logprob": -0.0017499924,
+      "special": false
+    },
+    {
+      "id": 13,
+      "text": "\n",
+      "logprob": -0.00043797493,
+      "special": false
+    },
+    {
+      "id": 5390,
+      "text": "       ",
+      "logprob": -0.002981186,
+      "special": false
+    },
+    {
+      "id": 1212,
+      "text": " type",
+      "logprob": -0.0001348257,
+      "special": false
+    },
+    {
+      "id": 28747,
+      "text": ":",
+      "logprob": -0.0001475811,
+      "special": false
+    },
+    {
+      "id": 5284,
+      "text": " Data",
+      "logprob": -0.0012168884,
+      "special": false
+    },
+    {
+      "id": 5433,
+      "text": "Types",
+      "logprob": -0.000038027763,
+      "special": false
+    },
+    {
+      "id": 28723,
+      "text": ".",
+      "logprob": -0.00019812584,
+      "special": false
+    },
+    {
+      "id": 10505,
+      "text": "STRING",
+      "logprob": -0.0019741058,
+      "special": false
+    },
+    {
+      "id": 28725,
+      "text": ",",
+      "logprob": -0.0042381287,
+      "special": false
+    },
+    {
+      "id": 13,
+      "text": "\n",
+      "logprob": -0.00014865398,
+      "special": false
+    },
+    {
+      "id": 5390,
+      "text": "       ",
+      "logprob": -0.0020141602,
+      "special": false
+    },
+    {
+      "id": 1914,
+      "text": " allow",
+      "logprob": -0.0006222725,
+      "special": false
+    },
+    {
+      "id": 4238,
+      "text": "Null",
+      "logprob": -0.00028443336,
+      "special": false
+    },
+    {
+      "id": 28747,
+      "text": ":",
+      "logprob": -0.00015556812,
+      "special": false
+    },
+    {
+      "id": 1341,
+      "text": " false",
+      "logprob": -0.004798889,
+      "special": false
+    },
+    {
+      "id": 13,
+      "text": "\n",
+      "logprob": -0.004196167,
+      "special": false
+    },
+    {
+      "id": 2287,
+      "text": "   ",
+      "logprob": -0.00079345703,
+      "special": false
+    },
+    {
+      "id": 1630,
+      "text": " },",
+      "logprob": -0.00026893616,
+      "special": false
+    },
+    {
+      "id": 13,
+      "text": "\n",
+      "logprob": -0.0006260872,
+      "special": false
+    },
+    {
+      "id": 2287,
+      "text": "   ",
+      "logprob": -0.00091171265,
+      "special": false
+    },
+    {
+      "id": 2990,
+      "text": " city",
+      "logprob": -0.002401352,
+      "special": false
+    },
+    {
+      "id": 28747,
+      "text": ":",
+      "logprob": -0.0025310516,
+      "special": false
+    },
+    {
+      "id": 371,
+      "text": " {",
+      "logprob": -0.0001809597,
+      "special": false
+    },
+    {
+      "id": 13,
+      "text": "\n",
+      "logprob": -0.00017035007,
+      "special": false
+    },
+    {
+      "id": 5390,
+      "text": "       ",
+      "logprob": -0.00037574768,
+      "special": false
+    },
+    {
+      "id": 1212,
+      "text": " type",
+      "logprob": -0.00007712841,
+      "special": false
+    },
+    {
+      "id": 28747,
+      "text": ":",
+      "logprob": -0.000029802322,
+      "special": false
+    },
+    {
+      "id": 5284,
+      "text": " Data",
+      "logprob": -0.00036263466,
+      "special": false
+    },
+    {
+      "id": 5433,
+      "text": "Types",
+      "logprob": -0.000011444092,
+      "special": false
+    },
+    {
+      "id": 28723,
+      "text": ".",
+      "logprob": -0.000074863434,
+      "special": false
+    },
+    {
+      "id": 10505,
+      "text": "STRING",
+      "logprob": -0.00059461594,
+      "special": false
+    },
+    {
+      "id": 28725,
+      "text": ",",
+      "logprob": -0.00063943863,
+      "special": false
+    },
+    {
+      "id": 13,
+      "text": "\n",
+      "logprob": -0.000031471252,
+      "special": false
+    },
+    {
+      "id": 5390,
+      "text": "       ",
+      "logprob": -0.00029420853,
+      "special": false
+    },
+    {
+      "id": 1914,
+      "text": " allow",
+      "logprob": -0.00018310547,
+      "special": false
+    },
+    {
+      "id": 4238,
+      "text": "Null",
+      "logprob": -0.00013065338,
+      "special": false
+    },
+    {
+      "id": 28747,
+      "text": ":",
+      "logprob": -0.0000718832,
+      "special": false
+    },
+    {
+      "id": 1341,
+      "text": " false",
+      "logprob": -0.0016326904,
+      "special": false
+    },
+    {
+      "id": 13,
+      "text": "\n",
+      "logprob": -0.00037503242,
+      "special": false
+    },
+    {
+      "id": 2287,
+      "text": "   ",
+      "logprob": -0.00040078163,
+      "special": false
+    },
+    {
+      "id": 1630,
+      "text": " },",
+      "logprob": -0.0004413128,
+      "special": false
+    },
+    {
+      "id": 13,
+      "text": "\n",
+      "logprob": -0.00013935566,
+      "special": false
+    },
+    {
+      "id": 2287,
+      "text": "   ",
+      "logprob": -0.00044107437,
+      "special": false
+    },
+    {
+      "id": 17955,
+      "text": " zip",
+      "logprob": -0.000954628,
+      "special": false
+    },
+    {
+      "id": 28747,
+      "text": ":",
+      "logprob": -0.0025348663,
+      "special": false
+    },
+    {
+      "id": 371,
+      "text": " {",
+      "logprob": -0.000111460686,
+      "special": false
+    },
+    {
+      "id": 13,
+      "text": "\n",
+      "logprob": -0.00033855438,
+      "special": false
+    },
+    {
+      "id": 5390,
+      "text": "       ",
+      "logprob": -0.00058555603,
+      "special": false
+    },
+    {
+      "id": 1212,
+      "text": " type",
+      "logprob": -0.000098228455,
+      "special": false
+    },
+    {
+      "id": 28747,
+      "text": ":",
+      "logprob": -0.000032782555,
+      "special": false
+    },
+    {
+      "id": 5284,
+      "text": " Data",
+      "logprob": -0.0005249977,
+      "special": false
+    },
+    {
+      "id": 5433,
+      "text": "Types",
+      "logprob": -0.000040650368,
+      "special": false
+    },
+    {
+      "id": 28723,
+      "text": ".",
+      "logprob": -0.00013792515,
+      "special": false
+    },
+    {
+      "id": 23776,
+      "text": "NUMBER",
+      "logprob": -0.014274597,
+      "special": false
+    },
+    {
+      "id": 28725,
+      "text": ",",
+      "logprob": -0.00121212,
+      "special": false
+    },
+    {
+      "id": 13,
+      "text": "\n",
+      "logprob": -0.000114798546,
+      "special": false
+    },
+    {
+      "id": 5390,
+      "text": "       ",
+      "logprob": -0.0003490448,
+      "special": false
+    },
+    {
+      "id": 1914,
+      "text": " allow",
+      "logprob": -0.00035595894,
+      "special": false
+    },
+    {
+      "id": 4238,
+      "text": "Null",
+      "logprob": -0.00016760826,
+      "special": false
+    },
+    {
+      "id": 28747,
+      "text": ":",
+      "logprob": -0.00007033348,
+      "special": false
+    },
+    {
+      "id": 1341,
+      "text": " false",
+      "logprob": -0.0027885437,
+      "special": false
+    },
+    {
+      "id": 13,
+      "text": "\n",
+      "logprob": -0.000623703,
+      "special": false
+    },
+    {
+      "id": 2287,
+      "text": "   ",
+      "logprob": -0.00042247772,
+      "special": false
+    },
+    {
+      "id": 443,
+      "text": " }",
+      "logprob": -0.101745605,
+      "special": false
+    },
+    {
+      "id": 13,
+      "text": "\n",
+      "logprob": -0.00046229362,
+      "special": false
+    },
+    {
+      "id": 3498,
+      "text": "});",
+      "logprob": -0.056671143,
+      "special": false
+    },
+    {
+      "id": 13,
+      "text": "\n",
+      "logprob": -0.0003077984,
+      "special": false
+    },
+    {
+      "id": 13,
+      "text": "\n",
+      "logprob": -0.02394104,
+      "special": false
+    },
+    {
+      "id": 730,
+      "text": "User",
+      "logprob": -0.69384766,
+      "special": false
+    },
+    {
+      "id": 28723,
+      "text": ".",
+      "logprob": -0.0002822876,
+      "special": false
+    },
+    {
+      "id": 3537,
+      "text": "has",
+      "logprob": -0.4326172,
+      "special": false
+    },
+    {
+      "id": 6167,
+      "text": "One",
+      "logprob": -0.15905762,
+      "special": false
+    },
+    {
+      "id": 28732,
+      "text": "(",
+      "logprob": -0.001914978,
+      "special": false
+    },
+    {
+      "id": 5049,
+      "text": "Address",
+      "logprob": -0.0010442734,
+      "special": false
+    },
+    {
+      "id": 28725,
+      "text": ",",
+      "logprob": -0.47827148,
+      "special": false
+    },
+    {
+      "id": 371,
+      "text": " {",
+      "logprob": -0.06921387,
+      "special": false
+    },
+    {
+      "id": 13,
+      "text": "\n",
+      "logprob": -0.60595703,
+      "special": false
+    },
+    {
+      "id": 2287,
+      "text": "   ",
+      "logprob": -0.007610321,
+      "special": false
+    },
+    {
+      "id": 7223,
+      "text": " foreign",
+      "logprob": -0.046081543,
+      "special": false
+    },
+    {
+      "id": 2064,
+      "text": "Key",
+      "logprob": -0.0029621124,
+      "special": false
+    },
+    {
+      "id": 28747,
+      "text": ":",
+      "logprob": -0.00724411,
+      "special": false
+    },
+    {
+      "id": 464,
+      "text": " '",
+      "logprob": -0.08514404,
+      "special": false
+    },
+    {
+      "id": 23490,
+      "text": "userId",
+      "logprob": -0.9667969,
+      "special": false
+    },
+    {
+      "id": 647,
+      "text": "',",
+      "logprob": -0.16552734,
+      "special": false
+    },
+    {
+      "id": 13,
+      "text": "\n",
+      "logprob": -0.014465332,
+      "special": false
+    },
+    {
+      "id": 2287,
+      "text": "   ",
+      "logprob": -0.027542114,
+      "special": false
+    },
+    {
+      "id": 390,
+      "text": " as",
+      "logprob": -0.56396484,
+      "special": false
+    },
+    {
+      "id": 28747,
+      "text": ":",
+      "logprob": -0.0043792725,
+      "special": false
+    },
+    {
+      "id": 464,
+      "text": " '",
+      "logprob": -0.0026454926,
+      "special": false
+    },
+    {
+      "id": 5540,
+      "text": "address",
+      "logprob": -0.09429932,
+      "special": false
+    },
+    {
+      "id": 28742,
+      "text": "'",
+      "logprob": -0.45166016,
+      "special": false
+    },
+    {
+      "id": 13,
+      "text": "\n",
+      "logprob": -0.0025691986,
+      "special": false
+    },
+    {
+      "id": 3498,
+      "text": "});",
+      "logprob": -0.0803833,
+      "special": false
+    },
+    {
+      "id": 13,
+      "text": "\n",
+      "logprob": -0.0009441376,
+      "special": false
+    },
+    {
+      "id": 13,
+      "text": "\n",
+      "logprob": -0.21398926,
+      "special": false
+    },
+    {
+      "id": 5049,
+      "text": "Address",
+      "logprob": -0.19055176,
+      "special": false
+    },
+    {
+      "id": 28723,
+      "text": ".",
+      "logprob": -0.00014293194,
+      "special": false
+    },
+    {
+      "id": 7244,
+      "text": "bel",
+      "logprob": -0.018188477,
+      "special": false
+    },
+    {
+      "id": 24487,
+      "text": "ongs",
+      "logprob": -0.00015580654,
+      "special": false
+    },
+    {
+      "id": 1551,
+      "text": "To",
+      "logprob": -0.00019013882,
+      "special": false
+    },
+    {
+      "id": 28732,
+      "text": "(",
+      "logprob": -0.00015890598,
+      "special": false
+    },
+    {
+      "id": 730,
+      "text": "User",
+      "logprob": -0.0024051666,
+      "special": false
+    },
+    {
+      "id": 28725,
+      "text": ",",
+      "logprob": -0.24975586,
+      "special": false
+    },
+    {
+      "id": 371,
+      "text": " {",
+      "logprob": -0.0050964355,
+      "special": false
+    },
+    {
+      "id": 13,
+      "text": "\n",
+      "logprob": -0.0026359558,
+      "special": false
+    },
+    {
+      "id": 2287,
+      "text": "   ",
+      "logprob": -0.0011920929,
+      "special": false
+    },
+    {
+      "id": 7223,
+      "text": " foreign",
+      "logprob": -0.0026741028,
+      "special": false
+    },
+    {
+      "id": 2064,
+      "text": "Key",
+      "logprob": -0.0005545616,
+      "special": false
+    },
+    {
+      "id": 28747,
+      "text": ":",
+      "logprob": -0.0005021095,
+      "special": false
+    },
+    {
+      "id": 464,
+      "text": " '",
+      "logprob": -0.0019273758,
+      "special": false
+    },
+    {
+      "id": 23490,
+      "text": "userId",
+      "logprob": -0.012168884,
+      "special": false
+    },
+    {
+      "id": 647,
+      "text": "',",
+      "logprob": -0.10040283,
+      "special": false
+    },
+    {
+      "id": 13,
+      "text": "\n",
+      "logprob": -0.00024414062,
+      "special": false
+    },
+    {
+      "id": 2287,
+      "text": "   ",
+      "logprob": -0.0029315948,
+      "special": false
+    },
+    {
+      "id": 390,
+      "text": " as",
+      "logprob": -0.0023860931,
+      "special": false
+    },
+    {
+      "id": 28747,
+      "text": ":",
+      "logprob": -0.00048017502,
+      "special": false
+    },
+    {
+      "id": 464,
+      "text": " '",
+      "logprob": -0.00029563904,
+      "special": false
+    },
+    {
+      "id": 1838,
+      "text": "user",
+      "logprob": -0.10266113,
+      "special": false
+    },
+    {
+      "id": 28742,
+      "text": "'",
+      "logprob": -0.027160645,
+      "special": false
+    },
+    {
+      "id": 13,
+      "text": "\n",
+      "logprob": -0.00029563904,
+      "special": false
+    },
+    {
+      "id": 3498,
+      "text": "});",
+      "logprob": -0.028305054,
+      "special": false
+    },
+    {
+      "id": 13,
+      "text": "\n",
+      "logprob": -0.00042963028,
+      "special": false
+    },
+    {
+      "id": 13,
+      "text": "\n",
+      "logprob": -0.03161621,
+      "special": false
+    },
+    {
+      "id": 4895,
+      "text": "module",
+      "logprob": -0.09240723,
+      "special": false
+    },
+    {
+      "id": 28723,
+      "text": ".",
+      "logprob": -0.00006330013,
+      "special": false
+    },
+    {
+      "id": 10126,
+      "text": "exports",
+      "logprob": -0.00006258488,
+      "special": false
+    },
+    {
+      "id": 327,
+      "text": " =",
+      "logprob": -0.0044784546,
+      "special": false
+    },
+    {
+      "id": 371,
+      "text": " {",
+      "logprob": -0.04058838,
+      "special": false
+    },
+    {
+      "id": 1247,
+      "text": " User",
+      "logprob": -0.6767578,
+      "special": false
+    },
+    {
+      "id": 28725,
+      "text": ",",
+      "logprob": -0.00484848,
+      "special": false
+    },
+    {
+      "id": 13046,
+      "text": " Address",
+      "logprob": -0.0012569427,
+      "special": false
+    },
+    {
+      "id": 2337,
+      "text": " };",
+      "logprob": -0.08288574,
+      "special": false
+    },
+    {
+      "id": 13,
+      "text": "\n",
+      "logprob": -0.00065517426,
+      "special": false
+    },
+    {
+      "id": 13940,
+      "text": "``",
+      "logprob": -0.17114258,
+      "special": false
+    },
+    {
+      "id": 28832,
+      "text": "`",
+      "logprob": 0,
+      "special": false
+    },
+    {
+      "id": 2,
+      "text": "</s>",
+      "logprob": -0.1673584,
+      "special": true
+    }
+  ]
 }
-
-model Address {
-  id       Int      @id @default(autoincrement())
-  street   String
-  city     String
-  zip      Int
-  user     User     @relation(fields: [userId], references: [id])
-  userId   Int
-}
-```
-

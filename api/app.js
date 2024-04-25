@@ -1,10 +1,12 @@
+import { writeFile } from "node:fs/promises";
 import express from "express";
 import cors from "cors";
 import multer from "multer";
 import parser from "./modules/parser.js";
 import interpreter from "./modules/interpreter.js";
+import generate from "./modules/generate.js";
+
 const app = express();
-import { writeFile } from "node:fs/promises";
 
 app.set("port", process.env.PORT || 3000);
 app.listen(app.get("port"));
@@ -21,15 +23,15 @@ const fileFilter = (req, file, cb) => {
 const upload = multer({ storage: multer.memoryStorage(), fileFilter });
 const analize = async (req, res) => {
   let content = req.body;
+  let { base, orm, db } = req.query;
   if (req.file) {
     const { buffer } = req.file;
     content = JSON.parse(buffer.toString("utf8"));
   }
-  const fields = interpreter(content, "user");
-  const models = Object.keys(fields);
+  const fields = interpreter(content, base);
+  const prompt = generate(fields, orm, db);
   try {
-    const { generated_text } = await parser(JSON.stringify(fields, null, 2));
-    await writeFile("./out.txt", generated_text);
+    const { generated_text } = await parser(prompt);
     return res.status(200).send(generated_text);
   } catch (error) {
     throw new Error(error);

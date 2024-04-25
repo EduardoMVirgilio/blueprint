@@ -1,15 +1,17 @@
 import { textGeneration } from "@huggingface/inference";
 import "dotenv/config";
 
-const parser = async (model, db = "PostgreSQL") => {
-  const input = `I am working with Prisma ORM and PostgreSQL, need to transform this data schema, give me only models for the file prisma/schema.prisma:\n${model}`;
+const parser = async (prompt) => {
   try {
     return await textGeneration({
       accessToken: process.env.H_TOKEN,
       model: "mistralai/Mixtral-8x7B-Instruct-v0.1",
-      inputs: input,
+      inputs: prompt,
       parameters: {
-        max_new_tokens: 250,
+        max_new_tokens: 500,
+        return_full_text: false,
+        decoder_input_details: false,
+        details: false,
       },
     });
   } catch (error) {

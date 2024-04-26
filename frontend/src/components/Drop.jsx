@@ -49,7 +49,7 @@ const Drop = () => {
         <input type="file" id="file" {...register("file")} />
       </label>
       {errors && errors.file && <output className={Style.error}>{errors.file.message}</output>}
-      <button className={Style.button}>{isSubmitting? "Analizing..." : "Upload"}</button>
+      <button className={Style.button}>{isSubmitting? "Analizing..." : "Solution in progress"}</button>
     </form>
   );
 };

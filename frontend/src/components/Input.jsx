@@ -12,12 +12,9 @@ const Input = () => {
             db: "PostgreSQL",
         },
     });
-    const { register, formState, reset, handleSubmit, setError, setValue } =
+    const { register, formState, reset, handleSubmit, setError } =
         state;
     const { errors, isSubmitting } = formState;
-    const sleep = function (ms) {
-        return new Promise((resolve) => setTimeout(resolve, ms));
-    };
 
     const analyze = async (data) => {
         const input = data.json;
@@ -59,7 +56,6 @@ const Input = () => {
         }
 
         try {
-            //await sleep(500);
             const server =
                 import.meta.env.VITE_SERVER || "http://localhost:3000";
             const endpoint = `${server}/analize`;

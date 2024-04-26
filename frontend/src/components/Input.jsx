@@ -31,9 +31,8 @@ const Input = () => {
                     body: JSON.stringify({ json: jsonText })
                 });
                 console.log(response)
-                // Manejar la respuesta del backend
                 const responseData = await response.text();
-                console.log("Respuesta del backend:", responseData);
+                /* console.log("Respuesta del backend:", responseData); */
                 setModel(responseData)
                 /* return true; */
             }

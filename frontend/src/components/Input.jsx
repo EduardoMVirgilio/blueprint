@@ -7,6 +7,7 @@ const Input = () => {
     const { register, formState, reset, handleSubmit, setError, setValue } =
         state;
     const { errors, isSubmitting } = formState;
+    const [model, setModel] = useState(null)
     const sleep = function (ms) {
         return new Promise((resolve) => setTimeout(resolve, ms));
     };
@@ -22,7 +23,19 @@ const Input = () => {
                 obj !== null &&
                 !Array.isArray(obj)
             ) {
-                return true;
+                const response = await fetch("http://localhost:3000/analize", {
+                    method: "POST",
+                    headers: {
+                        "Content-Type": "application/json"
+                    },
+                    body: JSON.stringify({ json: jsonText })
+                });
+                console.log(response)
+                // Manejar la respuesta del backend
+                const responseData = await response.text();
+                console.log("Respuesta del backend:", responseData);
+                setModel(responseData)
+                /* return true; */
             }
         } catch (error) {
             setError("registerInput", {
@@ -50,6 +63,7 @@ const Input = () => {
             <button className={Style.button}>
                 {isSubmitting ? "Analizing..." : "Upload"}
             </button>
+            <div>{model? (<p>{model}</p>) : null}</div>
         </form>
     );
 };

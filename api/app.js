@@ -1,4 +1,3 @@
-import { writeFile } from "node:fs/promises";
 import express from "express";
 import cors from "cors";
 import multer from "multer";
@@ -10,7 +9,7 @@ const app = express();
 
 app.set("port", process.env.PORT || 3000);
 app.listen(app.get("port"));
-app.use(express.urlencoded({ extended: true }));
+app.use(express.urlencoded({ extended: false }));
 app.use(express.json());
 app.use(cors());
 const fileFilter = (req, file, cb) => {
@@ -22,17 +21,18 @@ const fileFilter = (req, file, cb) => {
 
 const upload = multer({ storage: multer.memoryStorage(), fileFilter });
 const analize = async (req, res) => {
-  let content = req.body;
-  let { base, orm, db } = req.query;
+  let { base, orm, db, content } = req.body;
+  content = JSON.parse(content);
   if (req.file) {
     const { buffer } = req.file;
     content = JSON.parse(buffer.toString("utf8"));
   }
   const fields = interpreter(content, base);
   const prompt = generate(fields, orm, db);
+
   try {
     const { generated_text } = await parser(prompt);
-    return res.status(200).send(generated_text);
+    return res.status(200).json({ data: generated_text });
   } catch (error) {
     throw new Error(error);
   }

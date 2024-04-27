@@ -63,7 +63,9 @@ const Drop = () => {
                 throw new Error("Error on fetching...");
             }
             const res = await request.json();
-            setResponse(res.data);
+            const responseOk = res.data.trim()
+            setResponse(responseOk);
+            return reset();
         } catch (error) {
             return setError("json", {
                 type: "custom",
@@ -76,7 +78,7 @@ const Drop = () => {
         <form className={Style.form} onSubmit={handleSubmit(analize)}>
             <input
                 type="text"
-                placeholder="Write about is your data"
+                placeholder="What's your data about?"
                 {...register("about", {
                     required: {
                         value: true,
@@ -126,8 +128,8 @@ const Drop = () => {
             {errors && errors.orm && (
                 <output className={Style.error}>{errors.orm.message}</output>
             )}
-            <button className={Style.button}>
-                {isSubmitting ? "Analizing..." : "Solution in progress"}
+            <button disabled={isSubmitting} className={Style.button}>
+                {isSubmitting ? "Analizing..." : "Upload"}
             </button>
             {response && (
                 <code>

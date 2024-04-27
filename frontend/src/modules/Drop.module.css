@@ -1,9 +1,11 @@
+
 .form {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     gap: 1.5rem;
+    min-width: 50dvw;
 }
 
 .drop {
@@ -40,15 +42,76 @@
     font-family: 'Onest Variable', sans-serif;
 }
 
-/* estilar error */
+select:hover{
+    cursor: pointer;
+}
+
+
+.button:hover{
+    background-color: var(--alt2);
+    cursor: pointer;
+}
+
+
+
 .error {
     color: red;
 }
-
+select{
+    width: 20%;
+    padding: 0.5rem;
+    font-family: 'Onest Variable', sans-serif;
+    border-radius: 2em;
+    border: none;
+    background-color: var(--light);
+    display: flex;
+    justify-content: center;
+    align-content: center;
+}
+input{
+    width: 20%;
+    padding: 0.5rem;
+    font-family: 'Onest Variable', sans-serif;
+    border-radius: 2em;
+    border: none;
+    background-color: var(--light);
+    display: flex;
+    justify-content: center;
+    align-content: center;
+}
+pre {
+    background: #f4f4f4;
+    border: 1px solid #ddd;
+    border-left: 3px solid #f36d33;
+    color: var(--color1);
+    page-break-inside: avoid;
+    font-family: monospace;
+    font-size: 15px;
+    line-height: 1.6;
+    max-width: 100%;
+    overflow: auto;
+    padding: 2em;
+    display: block;
+    align-items: center;
+    word-wrap: break-word;  
+    margin-bottom: 20%;
+}
+.button {
+    width: 30%;
+    padding: 0.3rem;
+    font-family: 'Onest Variable', sans-serif;
+    border-radius: 2em;
+    border: none;
+    background-color: var(--light);
+}
 
 @media (orientation: portrait) and (max-width: 1280px) {
     .drop {
         width: 60dvw;
         height: 60dvw;
+    }
+    pre{
+        width: 70dvw;
+        text-wrap: pretty;
     }
 }

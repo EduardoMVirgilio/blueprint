@@ -12,7 +12,7 @@ const App = () => {
 
   return (
     <>
-      <h1>Blueprint</h1>
+      <h1>BLUEPRINT</h1>
       <h2>Your trusty DDBB model generator!</h2>
       <Tabs />
       {method === "file"? <Drop />: <Input /> }

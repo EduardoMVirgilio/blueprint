@@ -13,28 +13,30 @@ app.use(express.urlencoded({ extended: false }));
 app.use(express.json());
 app.use(cors());
 const fileFilter = (req, file, cb) => {
-  if (file.mimetype !== "application/json") {
-    return cb(new Error("Solo se permiten archivos JSON"));
-  }
-  cb(null, true);
+    if (file.mimetype !== "application/json") {
+        return cb(new Error("Solo se permiten archivos JSON"));
+    }
+    cb(null, true);
 };
 
 const upload = multer({ storage: multer.memoryStorage(), fileFilter });
 const analize = async (req, res) => {
-  let { base, orm, db, content } = req.body;
-  content = JSON.parse(content);
-  if (req.file) {
-    const { buffer } = req.file;
-    content = JSON.parse(buffer.toString("utf8"));
-  }
-  const fields = interpreter(content, base);
-  const prompt = generate(fields, orm, db);
+    let { base, orm, db, content } = req.body;
+    if (!req.file) {
+        content = JSON.parse(content);
+    }
+    if (req.file) {
+        const { buffer } = req.file;
+        content = JSON.parse(buffer.toString("utf8"));
+    }
+    const fields = interpreter(content, base);
+    const prompt = generate(fields, orm, db);
 
-  try {
-    const { generated_text } = await parser(prompt);
-    return res.status(200).json({ data: generated_text });
-  } catch (error) {
-    throw new Error(error);
-  }
+    try {
+        const { generated_text } = await parser(prompt);
+        return res.status(200).json({ data: generated_text });
+    } catch (error) {
+        throw new Error(error);
+    }
 };
 app.post("/analize", upload.single("file"), analize);

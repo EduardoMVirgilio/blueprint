@@ -1,5 +1,5 @@
 :root {
-  --color1: rgb(4, 32, 48);
+  --color1: rgb(0, 48, 68);
   --color2: rgb(80, 196, 240);
   --color3: rgb(96, 152, 248);
   --light: rgb(252, 248, 232);
@@ -7,25 +7,38 @@
   --alt2: rgb(252, 160, 48);
 }
 
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 body {
   font-family: 'Onest Variable', sans-serif;
   background-color: var(--color2);
+  margin: 0;
+  min-height: 100dvh;
+  display: grid;
+  place-content: center;
 }
 
 main {
-  min-height: calc(100dvh - 4rem);
+  max-width: 768px;
+  min-height: calc(100dvh - 5rem);
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: flex-start;
   align-items: center;
+  border: 0.25rem solid snow;
+  border-radius: 0 0 1rem 1rem;
+  position: relative;
 }
 
-h1{
-  margin-top: 4dvw;
-  margin-bottom: 1.5dvw;
-  text-decoration: underline overline #FF3028;
-}
-
-h2{
-  margin-bottom: 2dvw;
+@media (max-width:768px) {
+  main {
+    width: calc(100dvw - 1rem);
+    padding-bottom: .5rem;
+    margin-top: .75rem;
+    margin-bottom: 2.25rem;
+  }
 }

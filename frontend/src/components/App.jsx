@@ -4,20 +4,20 @@ import "@fontsource-variable/fira-code";
 import Drop from "./Drop";
 import Input from "./Input";
 import useMethod from "../hooks/useMethod";
-import "../index.css";
+import Style from "../modules/App.module.css";
 
 const App = () => {
-  const method = useMethod(({method}) => method)
-    
+  const method = useMethod(({ method }) => method);
 
   return (
     <>
-      <h1>BLUEPRINT</h1>
-      <h2>Your trusty DDBB model generator!</h2>
+      <header className={Style.header}>
+        <h1 id={Style.title}>BLUEPRINT</h1>
+        <h2 id={Style.subtitle}>Your trusty DDBB model generator!</h2>
+      </header>
       <Tabs />
-      {method === "file"? <Drop />: <Input /> }
+      {method === "file" ? <Drop /> : <Input />}
     </>
   );
 };
 export default App;
-
